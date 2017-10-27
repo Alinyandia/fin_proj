@@ -22,8 +22,8 @@ class Parser:
         text = get(self.url)
         if text.status_code == 200:
             info = BeautifulSoup(text.text, 'lxml')
-            table_big = info.findAll(class_='subtab')
-            return table_big
+            table = info.findAll(class_='subtab')
+            return table
         else:
             raise ConnectionError('The page is not available')
 
