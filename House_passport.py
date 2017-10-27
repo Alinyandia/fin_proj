@@ -88,7 +88,7 @@ class Passport(Parser):
         res, lifts_res = self.create_table()
 
         if self.write is True:
-            house_f = open('house_pasport.csv', 'w', encoding='utf-8-sig')
+            house_f = open('house_passport.csv', 'w', encoding='utf-8-sig')
             lift_f = open('lifts.csv', 'w', encoding='utf-8-sig')
             res.to_csv(house_f, sep=';')
             lifts_res.to_csv(lift_f, sep=';')
